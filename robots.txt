@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://rbz-99.github.io/webpage/sitemap/sitemap-index.xml
+Host: https://rbz-99.github.io
