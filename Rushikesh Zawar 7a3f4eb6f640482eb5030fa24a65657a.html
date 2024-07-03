@@ -1,0 +1,713 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Rushikesh Zawar</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7a3f4eb6-f640-482e-b503-0fa24a65657a" class="page sans"><header><img class="page-cover-image" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Header_image_2.png" style="object-position:center 51.05%"/><h1 class="page-title">Rushikesh Zawar</h1><p class="page-description"></p></header><div class="page-body"><ol type="1" id="e385b1b3-bf47-4e86-ad43-2a690b2ac902" class="numbered-list" start="1"><li><mark class="highlight-gray"><a href="https://www.notion.so/Rushikesh-Zawar-7a3f4eb6f640482eb5030fa24a65657a?pvs=21">About</a></mark><mark class="highlight-gray">   2. </mark><mark class="highlight-gray"><a href="https://www.notion.so/Rushikesh-Zawar-7a3f4eb6f640482eb5030fa24a65657a?pvs=21">Publications</a></mark><mark class="highlight-gray">.    3. </mark><mark class="highlight-gray"><a href="https://www.notion.so/Rushikesh-Zawar-7a3f4eb6f640482eb5030fa24a65657a?pvs=21">Experiences</a></mark><mark class="highlight-gray">     4. </mark><mark class="highlight-gray"><a href="https://www.notion.so/Rushikesh-Zawar-7a3f4eb6f640482eb5030fa24a65657a?pvs=21">Projects</a></mark><mark class="highlight-gray">     5. </mark><mark class="highlight-gray"><a href="https://www.notion.so/Rushikesh-Zawar-7a3f4eb6f640482eb5030fa24a65657a?pvs=21">Contact</a></mark></li></ol><h1 id="00d13dca-cc5f-449a-93e4-12d91a9c779c" class="">Hi 👋  I‘m <mark class="highlight-red">R</mark>ushikesh<mark class="highlight-red"> Z</mark>awar</h1><div id="89a60fe3-9af6-49a6-bfcf-c43a0eeefad1" class="column-list"><div id="357053fb-6447-450c-975d-00739c4f9b90" style="width:25%" class="column"><figure id="5f0811fd-4c70-4cd2-9828-c4065a67302d" class="image"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled.jpeg"><img style="width:288px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled.jpeg"/></a></figure></div><div id="a61a7dc6-659a-4e02-bb60-52feb890020c" style="width:75%" class="column"><p id="3fae1ffb-a06b-43e8-a61c-62a9afd347e9" class="">I am currently a Grad student in <strong>Computer Vision at CMU (Carnegie Mellon University). </strong></p><p id="68247971-d81d-4a37-8cd6-07092fa99848" class="">I have previously completed Bachelor&#x27;s in Computer Science and a Master&#x27;s in Biological Sciences at <strong>BITS Pilani</strong>, Pilani Campus, India, and partly at <strong>Harvard University</strong>.</p><p id="98862e84-8ba8-4820-b8ae-1238cebb99b4" class="">
+</p><p id="4d4a4d4c-ce35-469f-98a1-acff069047c3" class="">My interests are in Generative vision (Diffusion, GANs), in images, video, and also in 3D. I am also quite interested in interpretability and explainable AI (especially for VLMs). I am also quite interested in neuroscience, genetics, etc.</p><p id="261ae4c0-9032-4744-b29e-bc3e56a67d85" class="">
+</p><p id="c0c541e3-668e-4d26-a81b-38d4a581beb9" class="">I will be graduating in Dec 2024. I am looking for<strong> full-time opportunities</strong> that I can join starting January 2025!</p><p id="db9108fc-e73f-4062-91a1-88ac34f462a4" class="">
+</p><p id="515c48e1-eb26-4e4d-bba9-7b50c44d5822" class="">
+</p></div></div><h1 id="e20c40af-b02c-4510-99be-8cca373e1f39" class=""><mark class="highlight-red">Publications:</mark></h1><ol type="1" id="5db9b33d-adf4-4708-bd61-fd5a2cf1e6de" class="numbered-list" start="1"><li><strong>Zawar, R.*</strong> Dewan, S.*, et al. DiffusionPID: Interpreting Diffusion via Partial Information Decomposition (link) |  Submitted at <strong>Neurips 2024</strong></li></ol><div id="591d67d3-3c87-4453-a159-c0352adffc70" class="column-list"><div id="41ae9166-0c47-4554-9eb6-b9823712c453" style="width:37.5%" class="column"><figure id="9e8df343-d9d9-4a75-8843-cfe16fe9c4cb" class="image" style="text-align:right"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled.png"><img style="width:480px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled.png"/></a></figure></div><div id="b32f70bd-dc14-45f8-9a68-f9f33f43b43b" style="width:62.5%" class="column"><p id="9438071f-d38b-4123-83c1-fda2ed15e6de" class="">Developed a novel method that can split the Mutual Information between 2 input words in a text prompt in the generated image into its inherent components of: <strong>Synergy, Redundancy and Uniqueness. </strong>Our method can help get masks of the area that each of these individual components corresponds to and also get a quantifiable value</p><p id="d216613f-a4b1-4238-8730-b31a55b966f2" class="">Paper Link: <a href="https://arxiv.org/abs/2406.05191">https://arxiv.org/abs/2406.05191</a></p><p id="033649f7-2eeb-4f2f-ad5a-c11988d00c67" class="">
+</p><p id="1b214ead-92de-4edb-af45-d78936cb6489" class="">
+</p><p id="526d4dcc-3cd2-4848-a4fa-8bbe97d3d97e" class="">
+</p></div></div><hr id="6082956e-05e8-45bd-9a2b-1f411c859615"/><ol type="1" id="7bfe5c8b-c84d-434b-a90d-d6d071e5af34" class="numbered-list" start="2"><li><strong>Zawar, R.*</strong>, Dewan, S.*, et al. StableSemantics: A Synthetic Language-Vision Dataset of Semantic Representations in Naturalistic Image (link) | Submitted at <strong>Neurips 2024</strong></li></ol><div id="6732a35d-dfeb-4013-9572-1c59761ceaf8" class="column-list"><div id="7b31779a-aee3-429b-861c-239bec1622a6" style="width:56.25%" class="column"><figure id="c74271ca-6140-49e8-b5b1-a473bb0ce85f" class="image"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%201.png"><img style="width:1497px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%201.png"/></a></figure></div><div id="87be7fd3-75fc-4bbd-b846-0e69e2b18749" style="width:93.75%" class="column"><p id="4ee23882-bbc7-47b0-8fc5-ea16950ad94a" class="">Leveraging human-generated prompts that correspond to visually interesting stable diffusion generations, we provide 10 image generations per phrase, and extract cross-attention maps for each image. We explore the semantic distribution of generated images, examine the distribution of objects within images, and benchmark captioning and open vocabulary segmentation methods on our data.</p><p id="5e192a92-5b84-4c6c-b7d9-690623df41d6" class="">
+</p><p id="6254bb14-1487-4583-86b7-96034c0e60f6" class="">Paper Link: <a href="https://arxiv.org/html/2406.13735v1">https://arxiv.org/html/2406.13735v1</a></p><p id="9f70093f-d636-4c7d-9d6e-271c820f4784" class="">Project Page: <a href="https://stablesemantics.github.io/StableSemantics/">https://stablesemantics.github.io/StableSemantics/</a></p></div></div><hr id="c6d78021-2efe-4676-9003-677cc417d185"/><ol type="1" id="e5810792-5a4f-47d4-98da-42abca60a70e" class="numbered-list" start="3"><li>Litman, Y., et al. MaterialFusion: Enhancing Inverse Rendering with Material Diffusion Priors (link)  | Submitted at <strong>SIGGRAPH Asia 2024</strong></li></ol><div id="ba35f8cb-86ea-455d-a8c9-96fc178fa320" class="column-list"><div id="14098637-5256-4626-b23c-5b2ee1755e9b" style="width:56.25%" class="column"><figure id="19fcaeaf-f212-47d4-8b51-8b6da0088ba5" class="image" style="text-align:right"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%202.png"><img style="width:432px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%202.png"/></a></figure></div><div id="8f3df546-04b5-44c0-8713-62a011626c0e" style="width:93.75000000000001%" class="column"><p id="ea598bac-9c51-438e-ba76-3703f23cc588" class="">We present StableMaterial, a 2D diffusion model prior that refines multi-lit data to estimate the most likely albedo and material from given input appearances. This model is trained on albedo, material, and relit image data derived from a curated dataset of approximately <strong>12K</strong> artist-designed synthetic Blender objects called BlenderVault. The SDS signal from the 2D model is used in conjunction with the inverse rendering loss, improving the estimation of albedo and material</p><p id="b555e699-6ba4-4dc8-9027-b97f5502761d" class="">
+</p><p id="c9881d45-2131-4284-a00f-add6b762a050" class="">Paper Link: <a href="https://drive.google.com/file/d/1zHp4y6y4j_1SgmpJrCpa8y53hh8Fpeyx/view?usp=sharing">https://drive.google.com/file/d/1zHp4y6y4j_1SgmpJrCpa8y53hh8Fpeyx/view?usp=sharing</a></p><p id="c7dc405d-8eac-4a65-9206-bfa11c3ca56b" class="">
+</p></div></div><hr id="865f429a-68cf-4165-9e3a-faf6ef2f7817"/><ol type="1" id="e58027c1-25d2-4eb6-a1fe-186e9c370d9a" class="numbered-list" start="4"><li><strong>Zawar, R.</strong>, et al. Effect of Jensen-Shannon Divergence in Safe Multiagent RL | Accepted at <strong>ICLR 2024</strong> (Tiny paper)<p id="5f69bfef-d390-45ba-a315-39aead205ea3" class="">Here, we extend the Multi-Agent Constrained Policy Optimisation (MACPO) approach that maintains policy consistency using Kullback-Leibler (KL) divergence. We find that Jensen-Shannon (JS) Divergence, a symmetric measure, serves as a better alternative to KL divergence; its symmetric nature is more forgiving of extreme differences in policies.</p><p id="e340837d-adf7-4c6e-9dee-6267dac4a956" class="">(Work done as part of a project of an introductory course on Reinforcement Learning) </p><p id="31eacc1e-c8c8-465f-b2ff-d97f08063076" class="">
+</p><p id="3d849e75-94c4-4c1f-948f-65424481fd8f" class="">Paper Link: <a href="https://openreview.net/pdf/a6a17722b98fbfca3fda8a043ac1d1bb10a0e5c5.pdf">https://openreview.net/pdf/a6a17722b98fbfca3fda8a043ac1d1bb10a0e5c5.pdf</a></p><p id="ec4d0615-4c05-4dbd-ae9a-e14be9f9b105" class="">
+</p></li></ol><hr id="35dae288-257a-4f92-890d-bbe71e35a574"/><ol type="1" id="61a73bba-4843-493e-9a30-7403606f3ea1" class="numbered-list" start="5"><li>T El-Gaaly, <strong>Zawar, R</strong>., et al. (2023). Understanding Diffusion Model Images and Detection in the Frequency Domain. <div id="ce97d1f5-8d38-4ddc-9377-63bf9e55346f" class="column-list"><div id="d5bf7480-94d6-4a80-8b1e-1d881e98934b" style="width:53.333333333333336%" class="column"><figure id="28e8324b-96c6-4826-8f61-ae42b8a6cb06" class="image"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%203.png"><img style="width:480px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%203.png"/></a></figure></div><div id="83920099-7faf-45c0-92aa-b590c33e6d8d" style="width:100.00000000000003%" class="column"><p id="849f89d2-93dd-4609-b1c4-7845e3afcff0" class="">In this paper, we study DM-generated images, and discover that such images contain signature artifacts – not only in the spatio-visual domain in the form of peculiar patterns/textures, and lack symmetry but also in the frequency domain, where, DM generated images have lower spectral power at the high-end of the frequency spectrum; whereas state-of-the-art GAN generated and real images do not exhibit this bias. This can be interpreted in the spatio-visual domain as overly-smooth images that may look aesthetically pleasing, but from detection perspective are a tell-tale signature of DM generated images and generally do not occur in natural images.</p><p id="6a7c384e-7047-44ff-98a9-da569475460f" class="">
+</p><p id="b96cf272-864b-427e-a3ae-d131a5ce76dd" class="">Paper Link: </p></div></div></li></ol><hr id="738b2c7a-eded-4d57-a754-41fc522f845f"/><ol type="1" id="d09bf034-d626-4653-b888-a7407a9f8189" class="numbered-list" start="6"><li>Talbot, M. B.*, <strong>Zawar, R.*</strong>, et al. (2022). Lifelong Compositional Feature Replays Beat Image Replays in Stream Learning (* equal contribution) | TNNLS Journal</li></ol><div id="d98fe541-c9bd-42d5-ad9f-b147d0917c3e" class="column-list"><div id="8be491b4-a72e-49f6-a249-1eb416788534" style="width:50%" class="column"><figure id="b509cfcd-7d3a-4f06-a565-e6065aec782b" class="image" style="text-align:left"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%204.png"><img style="width:432px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%204.png"/></a></figure></div><div id="47630fd2-c89d-41af-ac73-0452357eb0ed" style="width:87.5%" class="column"><p id="d641514f-3db1-4266-9571-9f81d1f26202" class="">We propose a new continual learning algorithm, Compositional Replay Using Memory Blocks (CRUMB), which mitigates forgetting by replaying feature maps reconstructed by recombining generic parts. Just as crumbs together form a loaf of bread, we concatenate trainable and re-usable \enquote{memory block} vectors to compositionally reconstruct feature map tensors in convolutional neural networks.</p><p id="9922b26e-6379-483f-8f38-024419424d7e" class="">
+</p><p id="55316101-8ece-4d2b-b569-82d0bbfc501a" class="">Paper Link: <a href="https://arxiv.org/abs/2104.02206">https://arxiv.org/abs/2104.02206</a></p><p id="55d8b848-45d2-4dff-8e6a-850aa8fbee30" class="">
+</p></div></div><hr id="7c6f56cc-319a-4d6d-9e9c-e7fc5d5f9a31"/><ol type="1" id="28a5db8f-3a3d-46c8-9779-c5cd470bf671" class="numbered-list" start="7"><li><strong>Zawar, R. et al.</strong> (2022). Detecting Anomalies using Generative Adversarial Networks on Images | IMAVIS Journal</li></ol><div id="72cd61e9-6252-4b3f-a307-48bb2a45cbeb" class="column-list"><div id="723092e8-2f5e-400a-a46f-8936af4fc8b7" style="width:50%" class="column"><figure id="1d03c201-ece7-497a-81b6-ee321f5079a3" class="image" style="text-align:left"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%205.png"><img style="width:432px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Untitled%205.png"/></a></figure></div><div id="63d749e5-038d-4feb-82ab-158b071d7b13" style="width:87.5%" class="column"><p id="1a11cfdb-010c-493a-ad4a-2b14066974a7" class="">In this work we developed an anomaly detection method using GANs, where the GAN learns the distribution of normal images helping it detect any outlier. By using 3 loses the Generator and discrimination are used for the classification. </p><p id="ec6c363f-ee27-49bd-ac8d-c7c7bea22d59" class="">
+</p><p id="5f9adeeb-fdd2-4857-9096-9ed0f46fc2a2" class="">Paper Link:<a href="https://arxiv.org/abs/2211.13808"> https://arxiv.org/abs/2104.02206</a></p><p id="55063576-e2c2-4d0c-a567-eee2c663d3ba" class="">
+</p></div></div><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">Work Experiences:</mark></summary><div class="indented"><hr id="e7a51a3b-5890-4c5a-b78d-daf5cabe84a5"/><ol type="1" id="d8a6e34f-da19-4447-82ad-9dcdab178b29" class="numbered-list" start="1"><li><mark class="highlight-blue">Research Scientist Intern, </mark><mark class="highlight-blue"><strong>Adobe Research</strong></mark><mark class="highlight-blue"> |  Dr. Xue Bai, Dr. Aseem Agrawala                                                                                                            May 2024 - Present</mark><p id="1765c3f6-2975-41cd-a750-d1a5cae88396" class=""><mark class="highlight-gray">Seattle, WA, USA</mark>                                                                               </p><ul id="f532b3c3-1e9d-4f8b-b174-88f6fdf9f665" class="bulleted-list"><li style="list-style-type:disc">Created a research tool for meta data insights into millions of videos. Actively used by 10+ teams.</li></ul><ul id="bcade403-0002-419d-ae6a-d4ef30b12a94" class="bulleted-list"><li style="list-style-type:disc">Evaluating video and caption alignment for video generation and modifying video embeddings for building meta data.</li></ul><hr id="ce605b0f-9412-4c2f-a08c-15dbb6fedd98"/></li></ol><ol type="1" id="e68dbb5b-8969-45b9-80de-728431163fa6" class="numbered-list" start="2"><li><mark class="highlight-blue">Research Engineer, </mark><mark class="highlight-blue"><strong>Reality Defende</strong></mark><mark class="highlight-blue">r | Dr. Gaurav Bharaj                                                                                                                                              Aug 2022 - Aug 2023</mark><br/><br/><mark class="highlight-gray">Remote (New York, USA)</mark>			<ul id="44789367-a356-414c-9196-45305e4280e2" class="bulleted-list"><li style="list-style-type:disc">Found frequency patterns and built and deployed a novel diffusion image classifier based on frequency domain analysis, which also cross-generalizes (to unseen image classes).</li></ul><ul id="f9773e65-cb1b-40b1-a7d2-e30d11481ff9" class="bulleted-list"><li style="list-style-type:disc">Built and deployed a self-supervised classifier, that can identify faceswap type of fake images, just by training on real images.</li></ul><ul id="eb1b6b12-6ca7-4bb8-8215-36cafd018570" class="bulleted-list"><li style="list-style-type:disc">Built a robust and invisible fingerprint/watermark-based method to mark &amp; identify original images even after many types of real-world media modifications.</li></ul><hr id="1d7c5770-1f22-4622-a224-3794fbe70a0d"/></li></ol><ol type="1" id="ab326be3-a787-48ea-9bad-382409032806" class="numbered-list" start="3"><li><mark class="highlight-blue">Applied Scientist Intern, </mark><mark class="highlight-blue"><strong>Amazon</strong></mark><mark class="highlight-blue"> | Shobhit Niranjan                                                                                                                                                      Jan 2022 - June 2022</mark><p id="b1f11f20-88ca-4de2-9d31-0e6d6b59a023" class=""><mark class="highlight-gray">Banglore, India</mark></p><ul id="c32fcb60-83fc-4d70-8a7d-b77e076f48df" class="bulleted-list"><li style="list-style-type:disc">Built a Systematic Outlier Detection method to catch fraud &amp; abuse in online shopping with custom hierarchical clustering and graphs methods with Python, SQL, AWS, etc.</li></ul><ul id="0f383c6a-0b73-4a3d-b903-c896a116ef46" class="bulleted-list"><li style="list-style-type:disc">The developed method is live and adapts to new data. It captures fraud orders worth an average USD 1.1 million monthly (improvement of about USD 140k) throughout India.</li></ul><hr id="a0a55815-98f4-41dd-9651-677282a0ad5b"/></li></ol><ol type="1" id="691998b9-9333-4047-8ca4-8b54c0e19c3f" class="numbered-list" start="4"><li><mark class="highlight-blue"><strong>Researcher, Harvard University</strong></mark><mark class="highlight-blue"> | Dr. Gabriel Kreiman                                                                                                                                                 June 2021 - Aug 2023</mark><p id="281b3e89-0946-4459-8d4a-40743ec2dd8f" class=""><mark class="highlight-gray">Cambridge, MA, USA       </mark>                                                                                                                              </p><ul id="767be3d6-9fed-4820-8622-cd7e73f9a2e8" class="bulleted-list"><li style="list-style-type:disc">Built a <strong>continual learning model</strong> based on a <strong>brain-inspired replay mechanism</strong> to <strong>avoid catastrophic forgetting</strong> for multiple image classification tasks. </li></ul><ul id="bb5333e0-37aa-459e-84ff-b4bcf9399bce" class="bulleted-list"><li style="list-style-type:disc">Used streams of video data to make the model capable of learning with only<strong> 1 pass through</strong> <strong>the dataset.</strong></li></ul><ul id="7beb0f64-a5e0-4f78-8413-27f83978f1f3" class="bulleted-list"><li style="list-style-type:disc">Improved model&#x27;s accuracy by 22.5% which beats the top benchmarks by 11%. Accepted at TNNLS as a co-first author of the paper.</li></ul><hr id="772b22b4-1adb-4080-a80f-d8e6dfd2c685"/></li></ol><ol type="1" id="20c69dec-ba72-4510-8631-d6c2c3b4a554" class="numbered-list" start="5"><li><mark class="highlight-blue"><strong>Research Intern, MIT</strong></mark><mark class="highlight-blue"> | Dr. Pattie Maes                                                                                                                                                                                     May  - Aug 2020</mark><p id="b08e1ced-842b-488c-a0d1-874c91d5681e" class=""><mark class="highlight-gray">Cambridge, MA, USA       </mark>                                                                                                                              </p><ul id="c875002e-5f88-4147-8182-e6b783ff59f8" class="bulleted-list"><li style="list-style-type:disc">Worked on building a personalized assisted learning system to help with habit changes. </li></ul><ul id="3ade4c2e-47cf-4d5c-94ee-11f3d50f424f" class="bulleted-list"><li style="list-style-type:disc">Used sample-efficient reinforcement learning (RL), Bayesian learning methods, and probabilistic models to recommend behavior change interventions using human-in-the-loop RL</li></ul><ul id="1c5507fa-c0c0-4c77-84fb-26bcb18f1d7a" class="bulleted-list"><li style="list-style-type:disc">Created a custom gym environment, policy module, and simulator for human behavior. Created &amp; analyzed many visualizations for the same</li></ul><hr id="96a4a86d-36e0-4320-96b4-db67c2e32ef7"/></li></ol><ol type="1" id="818fa222-e5a2-4776-b708-001172b39d0e" class="numbered-list" start="6"><li><mark class="highlight-blue"><strong>Research Intern, Tata Institute of Fundamental Research (TIFR)</strong></mark><mark class="highlight-blue"> | Dr. Rahul Vaze                                                                                                          April - July 2020</mark><p id="1d7127ac-d93b-4ec3-894b-fd55aa2edf1f" class=""><mark class="highlight-gray">Remote (Mumbai, India)     </mark>                                                                                                                              </p><ul id="796299be-d7c5-4897-9a3f-888c86d37bc4" class="bulleted-list"><li style="list-style-type:disc">Worked in Game Theory to develop a cake-cutting algorithm to solve the problem of fair resource allocation. It works for any number of agents, and allows for arbitrary valuations over the cake.</li></ul><ul id="01a40fbc-075a-4272-a011-ffb28e38f56d" class="bulleted-list"><li style="list-style-type:disc">The allocation resulting from the algorithm ensures an envy-freeness restricted to any arbitrarily small number: epsilon. It further ensures that either the resource (cake) gets exhausted, or all the agents get their share</li></ul><hr id="7b232206-3030-44a4-87ca-3192dd39f8b8"/></li></ol><ol type="1" id="c514ba21-77e3-4cb3-b73f-380789774157" class="numbered-list" start="7"><li><mark class="highlight-blue"><strong>Intern, Map my India</strong></mark><mark class="highlight-blue"> | Ritesh Arora                                                                                                                                                                                            May - July 2019</mark><p id="7c18756c-6761-4612-bd26-b4cdb289b147" class=""><mark class="highlight-gray">Delhi, India      </mark>                                                                                                                              </p><ul id="ee3726ca-9edd-44f8-a022-247639b5e3ee" class="bulleted-list"><li style="list-style-type:disc">Developed a Kalman filter for path estimation of vehicles in low signal areas.</li></ul></li></ol></div></details><p id="a8d8338d-677c-4b80-bdda-e06076a94b78" class=""> </p><p id="b56e3eaf-9398-4ae7-aa58-77c3eed3cff6" class="">
+</p><div id="9502791d-74fd-4bd1-ae39-b84b1b1c9688" class="column-list"><div id="e349c8c2-106d-406b-8cda-5423dacac447" style="width:95.83333333333333%" class="column"><p id="85ed578d-ad7d-470a-b558-130b351859bd" class="">
+</p></div><div id="e9032062-a94a-48ca-af23-6f16c31e0e11" style="width:45.83333333333333%" class="column"><h1 id="d661de4a-dcab-4d0a-90de-bff01d688f8e" class="">Projects</h1></div><div id="8180e5fe-2cdd-4205-b3b4-23c99874e92b" style="width:79.1666666666667%" class="column"><p id="03f6dff8-b901-48b7-abca-6b731c5b58da" class="">
+</p></div></div><div id="46064013-8378-4e5c-b6bc-aab6ed222444" class="column-list"><div id="eab5c081-2e1f-482c-933b-4401002d2841" style="width:12.5%" class="column"><p id="68eb61df-a13d-41b6-9ba1-b22de7140531" class="">
+</p></div><div id="f9ddc466-b47d-4855-80f6-48ae10edf6e0" style="width:75%" class="column"><div id="363c4ec1-8dac-4896-9335-a56f37eca440" class="collection-content"><h4 class="collection-title">Projects</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Text</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th></tr></thead><tbody><tr id="9a1f6da9-0229-4ad5-a07f-4b8e0cf7c639"><td class="cell-title"><a href="https://www.notion.so/AutoDiff-and-FCNN-from-scratch-9a1f6da902294ad5a07f4b8e0cf7c639?pvs=21">AutoDiff and FCNN from scratch</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-purple">C++</span><span class="selected-value select-value-color-purple">CUDA</span><span class="selected-value select-value-color-orange">Numpy</span><span class="selected-value select-value-color-orange">PyTorch</span><span class="selected-value select-value-color-gray">Python</span></td><td class="cell-e@&gt;Y"><strong><a href="https://github.com/RBZ-99/DL_sys">Project Link</a></strong><strong> (Dr. Zico Kolter, Dr. Tianqi Chen)</strong></td><td class="cell-eAJn"></td></tr><tr id="718f74df-5135-44ab-80f4-74945db39ee8"><td class="cell-title"><a href="https://www.notion.so/ML-and-AI-Safety-718f74df513544ab80f474945db39ee8?pvs=21"><img class="icon" src="https://www.notion.so/icons/gym_orange.svg"/>ML and AI Safety</a></td><td class="cell-RQ:f"></td><td class="cell-e@&gt;Y">Course made by Dan Hendricks</td><td class="cell-eAJn"></td></tr><tr id="d1cfb469-d096-4a2d-9d64-4715c8495110"><td class="cell-title"><a href="https://www.notion.so/Chatbot-d1cfb469d0964a2d9d644715c8495110?pvs=21"><img class="icon" src="https://www.notion.so/icons/robot_green.svg"/>Chatbot</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-purple">NLP</span><span class="selected-value select-value-color-gray">Python</span><span class="selected-value select-value-color-default">nltk</span></td><td class="cell-e@&gt;Y"><a href="https://github.com/RBZ-99/Chatbot">Github link</a></td><td class="cell-eAJn"></td></tr><tr id="fbee780f-7cc9-4705-b69c-9423ffe290fb"><td class="cell-title"><a href="https://www.notion.so/Biophysical-Characterization-of-Protein-Structure-fbee780f7cc94705b69c9423ffe290fb?pvs=21">Biophysical Characterization of Protein Structure</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-yellow">BLAST</span><span class="selected-value select-value-color-brown">CHIMERA</span><span class="selected-value select-value-color-green">PSORT</span><span class="selected-value select-value-color-red">PYMOL</span><span class="selected-value select-value-color-gray">WOLF</span></td><td class="cell-e@&gt;Y"></td><td class="cell-eAJn"></td></tr><tr id="9cec9aca-0701-44e0-981b-863af3796f8b"><td class="cell-title"><a href="https://www.notion.so/Active-learning-for-image-classification-9cec9aca070144e0981b863af3796f8b?pvs=21"><span class="icon">🏃‍♂️</span>Active learning for image classification</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-orange">PyTorch</span><span class="selected-value select-value-color-gray">Python</span></td><td class="cell-e@&gt;Y"></td><td class="cell-eAJn"></td></tr><tr id="d1b0ab73-d8f3-4907-8ff1-c908e025e1a8"><td class="cell-title"><a href="https://www.notion.so/miRNA-target-prediction-d1b0ab73d8f349078ff1c908e025e1a8?pvs=21"><span class="icon">🧬</span>miRNA target prediction</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-yellow">Biology</span><span class="selected-value select-value-color-orange">PyTorch</span><span class="selected-value select-value-color-gray">Python</span></td><td class="cell-e@&gt;Y"></td><td class="cell-eAJn"></td></tr><tr id="951eafd6-8068-41b8-98d5-a70d08d51c5a"><td class="cell-title"><a href="https://www.notion.so/Interpretable-Deep-learning-using-GRAD-CAM-951eafd6806841b898d5a70d08d51c5a?pvs=21">Interpretable Deep learning using GRAD CAM</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-orange">PyTorch</span><span class="selected-value select-value-color-gray">Python</span></td><td class="cell-e@&gt;Y"></td><td class="cell-eAJn"></td></tr><tr id="ffd34b06-6fcb-4b72-bdad-c06c94c93a3e"><td class="cell-title"><a href="https://www.notion.so/Computer-Architecture-Verilog-ffd34b066fcb4b72bdadc06c94c93a3e?pvs=21"><span class="icon">💻</span>Computer Architecture- Verilog</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-orange">Verilog</span></td><td class="cell-e@&gt;Y"><a href="https://github.com/RBZ-99/VERILOG">Code link</a></td><td class="cell-eAJn"></td></tr><tr id="925587c6-6605-4b01-99bc-86cf63216bee"><td class="cell-title"><a href="https://www.notion.so/Custom-Language-and-Compiler-from-Scratch-925587c666054b0199bc86cf63216bee?pvs=21"><span class="icon">💻</span>Custom Language and Compiler from Scratch</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-brown">C</span><span class="selected-value select-value-color-gray">Script</span></td><td class="cell-e@&gt;Y"><a href="https://github.com/RBZ-99/Compiler_project">Github Link</a></td><td class="cell-eAJn"></td></tr><tr id="8d3d9302-e3a6-40d9-8998-d9d2f717e079"><td class="cell-title"><a href="https://www.notion.so/Information-Retrieval-System-8d3d9302e3a640d98998d9d2f717e079?pvs=21"><span class="icon">ℹ️</span>Information Retrieval System</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-gray">Python</span><span class="selected-value select-value-color-pink">Tensorflow</span></td><td class="cell-e@&gt;Y"><a href="https://github.com/RBZ-99/Information-Retrieval">Github link</a></td><td class="cell-eAJn"></td></tr><tr id="2285fca9-fd54-42c6-9372-46c31df25b39"><td class="cell-title"><a href="https://www.notion.so/Genetic-Engineering-2285fca9fd5442c6937246c31df25b39?pvs=21"><span class="icon">🧬</span>Genetic Engineering</a></td><td class="cell-RQ:f"><span class="selected-value select-value-color-orange">PCR</span><span class="selected-value select-value-color-orange">Wet lab</span><span class="selected-value select-value-color-red">pipetting</span></td><td class="cell-e@&gt;Y"></td><td class="cell-eAJn"></td></tr></tbody></table><br/><br/></div><p id="255f2c68-99e7-4aa0-9825-e86952b24a0f" class="">
+</p><p id="a201b05d-9e38-4e9c-846b-66ab350d792d" class="">
+</p><p id="855a403d-5f02-4147-bcdd-4bee20a2a0a6" class="">
+</p></div><div id="c5bd4bc2-23cd-4cb4-b5a3-2689e344ace5" style="width:12.499999999999956%" class="column"><p id="d64e01db-396d-41ec-9180-7bf1c354fba9" class="">
+</p><p id="b5162266-2104-414d-8777-f828afe3ce83" class="">
+</p></div></div><p id="c9c4338c-73d8-4f20-87e3-579fd57d0a53" class="">
+</p><div id="14abf9c3-61e2-4912-b4b6-1930286565b5" class="column-list"><div id="0311a68d-baf0-4b32-b65e-53e9ed58719b" style="width:43.75%" class="column"><figure id="b4b56ce5-ba83-426a-a956-3d7ff1b40cba" class="image" style="text-align:center"><a href="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Contact_img.png"><img style="width:192px" src="Rushikesh%20Zawar%207a3f4eb6f640482eb5030fa24a65657a/Contact_img.png"/></a></figure></div><div id="64f07b17-50f5-4b71-adf5-545fce944af8" style="width:56.25%" class="column"><h2 id="494f903d-ecc4-4158-b057-42d557536f4c" class="">Contact:</h2><p id="829f0fc9-7a51-44bb-908e-ceeaf6c02dab" class=""><mark class="highlight-blue"><strong>Email</strong></mark>:  rzawar@andrew.cmu.edu, rushikeshzawar10@gmail.com</p><p id="bbb3c2b0-08d0-40ca-aa9a-93c21ccda2cb" class=""><mark class="highlight-blue"><strong>Linkedin</strong></mark> : <a href="https://www.linkedin.com/in/rushikesh-zawar/">https://www.linkedin.com/in/rushikesh-zawar/</a></p><p id="2cffcbf1-b998-4c9b-ac14-36e5050ac0b7" class="">📍Seattle, WA, USA.</p><p id="b29a6465-9ca7-4308-a13c-50baa9aced8e" class="">
+</p><p id="cefc563f-91ad-416d-8d3d-4a7af1076ba0" class="">
+</p><p id="4c0b80cb-3469-4672-a141-1831bf1d245d" class="">
+</p></div></div><div id="31e7cbb2-84b4-468b-a7f8-1a1f8af2af1c" class="column-list"><div id="0cba0a3d-b570-45a8-bba5-cf35cc3cd0a8" style="width:33.33333333333333%" class="column"><p id="9ffda86c-437a-45bc-8bd9-5a60432e3cb5" class="">
+</p></div><div id="dc3f0f8d-b4fc-4d9b-a6cc-010c69f32992" style="width:108.33333333333333%" class="column"><p id="78c929ce-c58f-4dde-b8c4-49f8b51bca21" class="">
+</p></div><div id="791b0053-9c68-494e-aa4e-4f6d89531256" style="width:41.6666666666667%" class="column"><p id="77041e44-2750-49bb-a5bc-1e7db0d6134c" class="">
+</p></div></div><div id="caf5c75e-678d-4c34-87d8-879081aa3d0c" class="column-list"><div id="26f5435c-d436-449e-8ddd-11fcb6de14e3" style="width:45.83333333333333%" class="column"><p id="f47efd06-d293-4ee1-a7cc-72c92e873ac0" class="">
+</p></div><div id="b00ee883-0ae8-48d3-9e78-81a90ebf57fb" style="width:20.833333333333336%" class="column"><p id="3738abce-d283-4caf-a6d4-7992d339a714" class=""><strong><a href="https://www.notion.so/Rushikesh-Zawar-7a3f4eb6f640482eb5030fa24a65657a?pvs=21">Back to Top</a></strong> 👆</p></div><div id="4070cfcb-1212-4306-97aa-a2f5f40fe782" style="width:33.33333333333333%" class="column"><p id="163d957d-1f57-45f4-9fdc-cd7f80c6498a" class="">
+</p></div></div><p id="e8ea7378-6d17-4e89-a9b7-48039121e654" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
